@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102222921) do
+ActiveRecord::Schema.define(:version => 20111104072342) do
 
   create_table "locations", :force => true do |t|
     t.integer  "user_id"
@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(:version => 20111102222921) do
     t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "current_lat",                           :precision => 10, :scale => 8,                 :null => false
-    t.decimal  "current_lng",                           :precision => 10, :scale => 8,                 :null => false
+    t.decimal  "current_lat",                           :precision => 10, :scale => 8
+    t.decimal  "current_lng",                           :precision => 10, :scale => 8
     t.string   "current_state"
   end
 
