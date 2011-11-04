@@ -22,6 +22,8 @@ gem 'heroku'
 gem 'execjs'
 gem 'therubyracer'
 
+gem 'pg', :group => :production
+
 group :test do
   gem 'turn', :require => false
 end
