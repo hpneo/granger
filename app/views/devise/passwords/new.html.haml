@@ -1,0 +1,12 @@
+.form
+  %h2 ¿Olvidaste tu contraseña?
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+    = devise_error_messages!
+    .clearfix
+      = f.label 'E-mail'
+      .input
+        = f.email_field :email
+    .actions
+      = f.submit "Enviar instrucciones", :class => 'btn primary large'
+    .clearfix
+      = render :partial => "devise/shared/links"

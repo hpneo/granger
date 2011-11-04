@@ -1,0 +1,20 @@
+.form
+  %h2 Registrarse
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    .clearfix
+      = f.label 'E-mail'
+      .input
+        = f.email_field :email
+    .clearfix
+      = f.label 'Contraseña'
+      .input
+        = f.password_field :password
+    .clearfix
+      = f.label 'Confirmar contraseña'
+      .input
+        = f.password_field :password_confirmation
+    .actions
+      = f.submit "Registrarse", :class => 'btn primary large'
+    .clearfix
+      = render :partial => "devise/shared/links"
